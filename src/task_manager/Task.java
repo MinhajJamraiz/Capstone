@@ -2,7 +2,6 @@ package task_manager;
 
 import robot_manager.LogisticsRobot;
 
-//import application.DHLWareHouseMainWithLogs.LogisticsRobot;
 
 public abstract class Task {
     protected final String taskId;
