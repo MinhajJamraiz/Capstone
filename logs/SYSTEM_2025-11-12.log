@@ -1,0 +1,38 @@
+2025-11-12 22:40:46 LogManager initialized at D:\Eclipse Workspace\Capstone\logs
+2025-11-12 22:40:47 Starting simulation
+2025-11-12 22:40:47 TEST: system startup sample log
+2025-11-12 22:40:47 Archived logs into test_robot_r1_archive.zip
+2025-11-12 22:40:47 SEVERE: Move error: logs\ROBOT-R-1_2025-11-12.bin -> logs\moved\ROBOT-R-1_2025-11-12.bin: The process cannot access the file because it is being used by another process
+2025-11-12 22:40:47 WARN: Delete failed (not found): nonexistent_0000-00-00.log
+2025-11-12 22:40:50 Stopping simulation
+2025-11-12 22:42:03 LogManager initialized at D:\Eclipse Workspace\Capstone\logs
+2025-11-12 22:42:04 Starting simulation
+2025-11-12 22:42:04 TEST: system startup sample log
+2025-11-12 22:42:04 Archived logs into test_robot_r1_archive.zip
+2025-11-12 22:42:04 SEVERE: Move error: logs\ROBOT-R-1_2025-11-12.bin -> logs\moved\ROBOT-R-1_2025-11-12.bin: The process cannot access the file because it is being used by another process
+2025-11-12 22:42:04 WARN: Delete failed (not found): nonexistent_0000-00-00.log
+2025-11-12 22:42:06 Created task T-1 UNLOAD P-AU-1000 for null
+2025-11-12 22:42:06 Created task T-2 UNLOAD P-FR-1001 for null
+2025-11-12 22:42:06 Created task T-3 UNLOAD P-GE-1002 for null
+2025-11-12 22:42:06 Assigned task T-1 to robot R-1
+2025-11-12 22:42:06 Assigned task T-2 to robot R-2
+2025-11-12 22:42:06 Assigned task T-3 to robot R-3
+2025-11-12 22:42:07 Created task T-4 UNLOAD P-DE-1003 for null
+2025-11-12 22:42:07 Created task T-5 UNLOAD P-AU-1004 for null
+2025-11-12 22:42:07 Assigned task T-4 to robot R-4
+2025-11-12 22:42:07 Assigned task T-5 to robot R-5
+2025-11-12 22:42:07 Stopping simulation
+2025-11-12 22:44:09 LogManager initialized at D:\Eclipse Workspace\Capstone\logs
+2025-11-12 22:44:09 Starting simulation
+2025-11-12 22:44:09 TEST: system startup sample log
+2025-11-12 22:44:09 Archived logs into test_robot_r1_archive.zip
+2025-11-12 22:44:09 SEVERE: Move error: logs\ROBOT-R-1_2025-11-12.bin -> logs\moved\ROBOT-R-1_2025-11-12.bin: The process cannot access the file because it is being used by another process
+2025-11-12 22:44:09 WARN: Delete failed (not found): nonexistent_0000-00-00.log
+2025-11-12 22:44:11 Stopping simulation
+2025-11-12 22:45:21 LogManager initialized at D:\Eclipse Workspace\Capstone\logs
+2025-11-12 22:45:21 Starting simulation
+2025-11-12 22:45:21 TEST: system startup sample log
+2025-11-12 22:45:22 Archived logs into test_robot_r1_archive.zip
+2025-11-12 22:45:22 SEVERE: Move error: logs\ROBOT-R-1_2025-11-12.bin -> logs\moved\ROBOT-R-1_2025-11-12.bin: The process cannot access the file because it is being used by another process
+2025-11-12 22:45:22 WARN: Delete failed (not found): nonexistent_0000-00-00.log
+2025-11-12 22:45:23 Stopping simulation
