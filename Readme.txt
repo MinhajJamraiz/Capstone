@@ -1,7 +1,7 @@
-1- For running the DHL Capstone Application (including JAVAFX SDK):
+1- For running the DHL Capstone Application (including JAVAFX SDK for windows x64):
 
 we have included a jar application in RunnableJarFile. JavaFX SDK is also provided in the same folder.
-cd into RunnableJarFile folder and open terminal.
+cd into RunnableJarFile folder and open terminal. 
 
 Run the following command in the terminal. 
 
@@ -14,7 +14,7 @@ This should open the application.
 
 Refer to corresponding screencast video on how to use it. 
 
-2- For Build Project in Eclipse:
+2- For Building Project in Eclipse:
 
 
 
