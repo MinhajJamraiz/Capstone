@@ -1,4 +1,4 @@
-package application;
+package log_manager;
 
 import java.io.BufferedOutputStream;
 import java.io.BufferedWriter;

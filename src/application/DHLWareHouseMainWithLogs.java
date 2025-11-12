@@ -1,10 +1,4 @@
 package application;
-/*
-DHL Smart Automated Warehouse - JavaFX Simulation (extended logging)
-
-Author: Muhammad Mohsin Abbasi
-*/
-
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.beans.property.*;
@@ -38,7 +32,7 @@ import java.util.regex.*;
 
 public class DHLWareHouseMainWithLogs extends Application {
 
-    // --- Entry point ---
+	   // --- Entry point ---
     public static void main(String[] args) {
         launch(args);
     }
@@ -60,7 +54,7 @@ public class DHLWareHouseMainWithLogs extends Application {
         hmi.startUIUpdater();
 
         // run basic tests / demo to create some sample logs
-        //TestHarness.runAll(system.getLogManager());
+        TestHarness.runAll(system.getLogManager());
     }
 
     @Override
@@ -68,4 +62,10 @@ public class DHLWareHouseMainWithLogs extends Application {
         system.stopSimulation();
         super.stop();
     }
+
+
 }
+
+
+
+

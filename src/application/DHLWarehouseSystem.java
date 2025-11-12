@@ -13,6 +13,11 @@ import java.util.List;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.util.Duration;
+import log_manager.LogManager;
+import robot_manager.ChargingStation;
+import robot_manager.LogisticsRobot;
+import storage_manager.StorageManager;
+import task_manager.TaskManager;
 
 public class DHLWarehouseSystem {
     public final StorageManager storageManager;

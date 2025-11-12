@@ -37,6 +37,10 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
+import robot_manager.LogisticsRobot;
+import storage_manager.StorageRack;
+import storage_manager.StorageSlot;
+import task_manager.Task;
 
 public class HMI {
     private final DHLWarehouseSystem system;
