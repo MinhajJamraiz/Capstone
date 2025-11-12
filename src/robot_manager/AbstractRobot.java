@@ -3,12 +3,9 @@ package robot_manager;
 import java.util.concurrent.CompletableFuture;
 
 import application.DHLWarehouseSystem;
-//import application.DHLWareHouseMainWithLogs.ChargeTask;
-//import application.DHLWareHouseMainWithLogs.ChargingStation;
-//import application.DHLWareHouseMainWithLogs.DHLWarehouseSystem;
+
 import application.Location;
-//import application.DHLWareHouseMainWithLogs.LogManager;
-//import application.DHLWareHouseMainWithLogs.LogisticsRobot;
+
 import javafx.application.Platform;
 import log_manager.LogManager;
 import task_manager.ChargeTask;

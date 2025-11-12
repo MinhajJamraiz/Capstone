@@ -2,7 +2,6 @@ package robot_manager;
 
 import log_manager.LogManager;
 
-//import application.DHLWareHouseMainWithLogs.LogManager;
 
 public class ChargingStation implements IEquipment {
     private final String id;

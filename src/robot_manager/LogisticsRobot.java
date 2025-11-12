@@ -4,10 +4,6 @@ import application.DHLWarehouseSystem;
 import application.Location;
 import log_manager.LogManager;
 
-//import application.DHLWareHouseMainWithLogs.ChargingStation;
-//import application.DHLWareHouseMainWithLogs.DHLWarehouseSystem;
-//import application.DHLWareHouseMainWithLogs.Location;
-//import application.DHLWareHouseMainWithLogs.LogManager;
 
 public class LogisticsRobot extends AbstractRobot {
     public LogisticsRobot(String id, DHLWarehouseSystem system, LogManager logManager) {
