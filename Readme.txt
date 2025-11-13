@@ -1,18 +1,31 @@
+Capstone Project: DHL smart automated warehouse system 
+
+GROUP 4
+
+1: Muhammad Mohsin Abbasi ESE 7221880
+2: Minhaj Jamraiz Abbasi MDT 7223983
+3: Asaad Saeed Hamid Alawy MDT 7219758
+4: Wajihah Kainat MDT 7223295
+
+
+
+SETUP AND CONFIGURATION METHODS:
+
 1- For running the DHL Capstone Application (including JAVAFX SDK for windows x64):
 
-we have included a jar application in RunnableJarFile. JavaFX SDK is also provided in the same folder.  
-cd into RunnableJarFile folder and open terminal.  
+      we have included a jar application in RunnableJarFile. JavaFX SDK is also provided in the same folder.  
+      cd into RunnableJarFile folder and open terminal.  
 
-Run the following command in the terminal. 
+      Run the following command in the terminal. 
 
-java --module-path "C:\Users\mohsi\RunnableJarFile\openjfx-25_windows-x64_bin-sdk\javafx-sdk-25\lib" --add-modules javafx.controls,javafx.fxml -jar DHL_CapstoneApplication_Group4.jar
+      java --module-path "C:\Users\mohsi\RunnableJarFile\openjfx-25_windows-x64_bin-sdk\javafx-sdk-25\lib" --add-modules javafx.controls,javafx.fxml -jar DHL_CapstoneApplication_Group4.jar
 
 
-Please adjust the module path for the lib folder as it is in your system.
+      Please adjust the module path for the lib folder as it is in your system.
 
-This should open the application.
+      This should open the application.
 
-Refer to corresponding screencast video on how to use it.
+      Refer to corresponding screencast video on how to use it.
 
 
 
