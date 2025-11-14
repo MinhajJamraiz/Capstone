@@ -71,7 +71,7 @@ public abstract class AbstractRobot implements IEquipment, ITaskAssignable, ICha
             }
             if (batteryLevel <= 10) {
                 // emergency: immediate go to charge
-                if (!(currentTask instanceof ChargeTask)) {
+                if (!(currentTask instanceof ChargeTask) ) {
                     currentTask = new ChargeTask("AUTO-CHG-" + robotId, null);
                 }
             }
@@ -85,7 +85,7 @@ public abstract class AbstractRobot implements IEquipment, ITaskAssignable, ICha
                     Platform.runLater(() -> {
                         if (taskToRun.getStatus() == TaskStatus.COMPLETED || taskToRun.getStatus() == TaskStatus.FAILED) {
                             currentTask = null;
-                            if (status != "UNCHARGED" && status!="CHARGING")
+                            if (status != "UNCHARGED" && status!="CHARGING") 
                             status = "IDLE";
                             currentTaskRunning = false;
                             logManager.logRobot(robotId, "Task " + taskToRun.getTaskId() + " finished"+"status:"+status);

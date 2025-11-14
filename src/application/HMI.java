@@ -255,7 +255,7 @@ public class HMI {
             for (Task t : system.taskManager.getQueuedTasks()) {
                 taskRows.add(new TaskRow(t.getTaskId(), t.getType().toString(), t.getParcelId(), t.getStatus().toString()));
             }
-            // My change for updating racks
+            //change for updating racks
          // update warehouse grid rectangles
             //for (Map.Entry<StorageSlot, Rectangle> slot : slotRectMap.entrySet()) {
             for (StorageSlot slot : slotRectMap.keySet()) {

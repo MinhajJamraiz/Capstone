@@ -15,6 +15,7 @@ public class LoadTask extends Task {
         super(taskId, TaskType.LOAD, parcelId);
         this.loadingDock = dock;
     }
+    
 
     @Override
     public void execute(LogisticsRobot robot) {

@@ -80,10 +80,12 @@ public class TaskManager implements ITaskAssignable {
             while (it.hasNext()) {
                 Task t = it.next();
                 Optional<LogisticsRobot> optRobot = system.robots.stream().filter(LogisticsRobot::isIdle).findFirst();
-                if (optRobot.isPresent() /*&& i<=5*/) {
+                if (optRobot.isPresent()/*&& i<=5*/) {
                     LogisticsRobot r = optRobot.get();
+                    if (!(r.getBatteryLevel() <12 && r.getStatus().equals("IDLE"))) {
                     assignTask(r, t);
                     it.remove();
+                    }
                     //i++;
                     //logManager.logSystem("value of i is "+i);
                 } else {

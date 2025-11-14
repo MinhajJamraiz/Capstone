@@ -50,10 +50,10 @@ public class DHLWarehouseSystem {
         taskManager = new TaskManager(this, logManager);
 
         // create few racks, slots
-        storageManager.createRacks(5, 6); // 4 racks x 6 slots
+        storageManager.createRacks(5, 10); // 4 racks x 6 slots
 
         // create charging stations
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 2; i++) {
             chargingStations.add(new ChargingStation("CS-" + (i + 1), logManager));
         }
         // create Docks
