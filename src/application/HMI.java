@@ -71,7 +71,7 @@ public class HMI {
         Button btnStop = new Button("Stop Simulation");
         Button btnCreateLoad = new Button("Create Load Task");
         Button btnCreateUnload = new Button("Create Unload Task (random)");
-        Button btnReloadLog = new Button("Reload Log File");
+        //Button btnReloadLog = new Button("Reload Log File");
         TextField textField = new TextField();
         
         btnStart.setOnAction(e -> system.startSimulation());
@@ -101,26 +101,10 @@ public class HMI {
                      taskRows.add(new TaskRow(t.getTaskId(), t.getType().toString(), t.getParcelId(), t.getStatus().toString()));
                 }
             }
-            
-            /*
-            String pid ="NULL";
-            for (String key : map.keySet())
-            {
-            	if (key.substring(2,4).equals("FR")) {
-            		pid = key;
-            		break;
-            	}
-            }
-            if (pid.equals("NULL"))
-            {
-            	 system.getLogManager().logStorageWarning("No parcels to load");
-                 return;
-            }
-            Task t = system.taskManager.createloadTask(pid,system.loadingDocks.get(0));
-            taskRows.add(new TaskRow(t.getTaskId(), t.getType().toString(), t.getParcelId(), t.getStatus().toString()));*/
         });
 
-        top.getChildren().addAll(btnStart, btnStop, btnCreateLoad,textField, btnCreateUnload, btnReloadLog);
+        //top.getChildren().addAll(btnStart, btnStop, btnCreateLoad,textField, btnCreateUnload, btnReloadLog);
+        top.getChildren().addAll(btnStart, btnStop, btnCreateLoad,textField, btnCreateUnload);
 
         // center: robot table and task table
         robotTable.setPrefWidth(420);

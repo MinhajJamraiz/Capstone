@@ -29,12 +29,6 @@ public class LogManager {
     private final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     // Writers map for character streams
     private final Map<String, BufferedWriter> writers = new HashMap<>();
-    // binary streams map for simulation of bytes
-    private final Map<String, FileOutputStream> binStreams = new HashMap<>();
-
-    // file name regex helpers
-    // Example filenames: SYSTEM_2025-10-26.log, ROBOT-R-1_2025-10-26.log, CS-CS-1_2025-10-26.log
-    private final Pattern logFilePattern = Pattern.compile("^(?<target>[A-Za-z0-9\\-]+(?:_[A-Za-z0-9\\-]+)*)_(?<date>\\d{4}-\\d{2}-\\d{2})\\.(?<ext>log|bin)$");
 
     public LogManager(Path baseDir) {
         this.baseDir = baseDir;
@@ -57,10 +51,6 @@ public class LogManager {
         return baseDir.resolve(fname);
     }
 
-    private synchronized Path binLogPath(String target, String date) {
-        String fname = target + "_" + date + ".bin";
-        return baseDir.resolve(fname);
-    }
 
     private synchronized BufferedWriter getWriter(String target, String date) throws IOException {
         String key = target + "_" + date + ".log";
@@ -71,14 +61,6 @@ public class LogManager {
         return bw;
     }
 
-    private synchronized FileOutputStream getBinStream(String target, String date) throws IOException {
-        String key = target + "_" + date + ".bin";
-        if (binStreams.containsKey(key)) return binStreams.get(key);
-        Path p = binLogPath(target, date);
-        FileOutputStream fos = new FileOutputStream(p.toFile(), true); // append
-        binStreams.put(key, fos);
-        return fos;
-    }
 
     // generic low-level logging method — writes both char and byte streams
     private synchronized void writeLog(String target, String message, String date) {
@@ -90,15 +72,6 @@ public class LogManager {
             bw.flush();
         } catch (IOException ioe) {
             System.err.println("Failed to write char log for " + target + ": " + ioe.getMessage());
-        }
-        // also write raw bytes
-        try {
-            FileOutputStream fos = getBinStream(target, date);
-            byte[] data = line.getBytes(StandardCharsets.UTF_8);
-            fos.write(data);
-            fos.flush();
-        } catch (IOException ioe) {
-            System.err.println("Failed to write byte log for " + target + ": " + ioe.getMessage());
         }
     }
 
@@ -156,16 +129,7 @@ public class LogManager {
             try {
                 if (candidate.toString().endsWith(".log")) {
                     return Optional.of(new String(Files.readAllBytes(candidate), StandardCharsets.UTF_8));
-                } else {
-                    byte[] bytes = Files.readAllBytes(candidate);
-                    StringBuilder sb = new StringBuilder();
-                    sb.append("Binary file preview (").append(bytes.length).append(" bytes)\n");
-                    for (int i = 0; i < Math.min(bytes.length, 1024); i++) {
-                        sb.append(String.format("%02X ", bytes[i]));
-                        if ((i + 1) % 16 == 0) sb.append('\n');
-                    }
-                    return Optional.of(sb.toString());
-                }
+                } 
             } catch (IOException e) {
                 logSystemSevere("Failed to read log file " + candidate + ": " + e.getMessage());
                 return Optional.empty();
@@ -179,22 +143,6 @@ public class LogManager {
                 return Optional.of(new String(Files.readAllBytes(text), StandardCharsets.UTF_8));
             } catch (IOException e) {
                 logSystemSevere("Failed to read log: " + e.getMessage());
-                return Optional.empty();
-            }
-        }
-        Path bin = binLogPath(equipmentTargetOrFilename, date);
-        if (Files.exists(bin)) {
-            try {
-                byte[] bytes = Files.readAllBytes(bin);
-                StringBuilder sb = new StringBuilder();
-                sb.append("Binary file preview (").append(bytes.length).append(" bytes)\n");
-                for (int i = 0; i < Math.min(bytes.length, 1024); i++) {
-                    sb.append(String.format("%02X ", bytes[i]));
-                    if ((i + 1) % 16 == 0) sb.append('\n');
-                }
-                return Optional.of(sb.toString());
-            } catch (IOException e) {
-                logSystemSevere("Failed to read binary log: " + e.getMessage());
                 return Optional.empty();
             }
         }
@@ -278,12 +226,8 @@ public class LogManager {
             for (BufferedWriter bw : writers.values()) {
                 try { bw.close(); } catch (IOException ignored) {}
             }
-            for (FileOutputStream fos : binStreams.values()) {
-                try { fos.close(); } catch (IOException ignored) {}
-            }
         } finally {
             writers.clear();
-            binStreams.clear();
         }
     }
 }

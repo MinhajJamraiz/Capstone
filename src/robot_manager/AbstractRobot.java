@@ -75,29 +75,6 @@ public abstract class AbstractRobot implements IEquipment, ITaskAssignable, ICha
                     currentTask = new ChargeTask("AUTO-CHG-" + robotId, null);
                 }
             }
-            // If have task, execute
-            /*if (currentTask != null) {
-                try {
-                    currentTask.execute((LogisticsRobot) this);
-                    if (currentTask.getStatus() == TaskStatus.COMPLETED) {
-                        logManager.logRobot(robotId, "Task " + currentTask.getTaskId() + " completed by " + robotId);
-                        currentTask = null;
-                        status = "IDLE";
-                    } else if (currentTask.getStatus() == TaskStatus.FAILED) {
-                        logManager.logRobot(robotId, "Task " + currentTask.getTaskId() + " failed on " + robotId);
-                        currentTask = null;
-                        status = "IDLE";
-                    }
-                } catch (ClassCastException cce) {
-                    logManager.logSystemSevere("Task execute type error: " + cce.getMessage());
-                    currentTask = null;
-                    status = "IDLE";
-                } catch (Exception ex) {
-                    logManager.logSystemSevere("Robot execution error: " + ex.getMessage());
-                    currentTask = null;
-                    status = "IDLE";
-                }
-            }*/
          // execute task asynchronously if not already running
             if (currentTask != null && !currentTaskRunning) {
                 currentTaskRunning = true;
