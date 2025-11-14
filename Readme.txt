@@ -8,6 +8,10 @@ GROUP 4
 4: Wajihah Kainat MDT 7223295
 
 
+SCREENCAST: 
+ 	https://drive.google.com/file/d/1ABeULHBNc-juCYCASDQQOP-kEQH9wCTt/view?usp=sharing
+
+
 
 SETUP AND CONFIGURATION METHODS:
 
@@ -54,7 +58,7 @@ SETUP AND CONFIGURATION METHODS:
         3: Go to Arguments Section 
         4: Enter this command in VM Arguments :
             --module-path "path to lib folder of JavaFX" --add-modules javafx.controls,javafx.fxml
-            !!!! NOTE: <strong> Please change (path to lib folder of JavaFX) to actual path of JavaFX lib folder 
+            !!!! NOTE: Please change (path to lib folder of JavaFX) to actual path of JavaFX lib folder 
         5: Select Apply and Close. 
 
 
@@ -72,6 +76,6 @@ SETUP AND CONFIGURATION METHODS:
         3: Go to Arguments Section 
         4: Enter this command in VM Arguments 
                 --module-path "path to lib folder of JavaFX" --add-modules javafx.controls,javafx.fxml
-                !!!! NOTE: <strong> Please change (path to lib folder of JavaFX) to actual path of JavaFX lib folder 
+                !!!! NOTE: Please change (path to lib folder of JavaFX) to actual path of JavaFX lib folder 
         5: Apply --> Close 
 
